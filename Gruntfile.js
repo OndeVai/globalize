@@ -112,7 +112,7 @@ grunt.initConfig({
 					// 1: UMD intro
 					// 2: UMD outro
 					return contents
-						.replace( /\(function\( root, factory \)[\s\S]*?}\( this, function\(\) {/, "	var Cldr = (function() {" ) /* 1 */
+						.replace( /\(function\( root, factory \)[\s\S]*?}\( this, function\(\) {/, "var Cldr = (function() {" ) /* 1 */
 						.replace( /}\)\);\s+$/, "}());" ); /* 2 */
 				}
 
@@ -125,13 +125,13 @@ grunt.initConfig({
 
 				// Type b (not as simple as a single return)
 				if ( [ "date/parse" ].indexOf( id ) !== -1 ) {
-					contents = "	var " + name + " = (function() {" +
+					contents = "var " + name + " = (function() {" +
 						contents + "}());";
 				}
 				// Type a (single return)
 				else if ( (/\//).test( id ) ) {
 					contents = contents
-						.replace( /	return/, "	var " + name + " =" );
+						.replace( /\nreturn/, "\nvar " + name + " =" );
 				}
 
 				return contents;
