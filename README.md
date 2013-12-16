@@ -4,9 +4,12 @@
 [![devDependency Status](https://david-dm.org/jquery/globalize/dev-status.png)](https://david-dm.org/jquery/globalize#info=devDependencies)
 
 
-A JavaScript library for globalization and localization that leverages the
-official CLDR JSON data. Run in browsers and node.js.
+A JavaScript library for globalization and localization that leverage the
+official [Unicode CLDR](http://cldr.unicode.org/) JSON data. Run in browsers and
+node.js.
 
+
+----
 
 ## Heads Up!
 
@@ -14,6 +17,8 @@ We're working the migration to CLDR. This is an alpha version of Globalize: 1.0.
 
 Patches to the previous stable codebase probably can't be landed. If you have a
 problem, please create an issue first before trying to patch it.
+
+----
 
 - [Getting Started](#getting_started)
   - [Why Globalization](#why)
@@ -77,7 +82,7 @@ easy to use. Read below [How to get and load CLDR JSON data](#cldr_usage) for
 more information on its usage.
 
 <a name="modules"></a>
-#### Only load and use what you need
+#### Load and use what you need only
 
 Globalize is split in modules.
 
