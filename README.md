@@ -69,7 +69,7 @@ and dates into that string format.
 #### Where to use it?
 
 It's designed to work both in the [browser](#browser_support), or in
-[node.js](#commonjs). It supports [AMD](#amd), and [CommonJs](#commonjs);
+[node.js](#usage). It supports [AMD](#usage), and [CommonJs](#usage);
 
 <a name="cldr"></a>
 #### Where does I18n data come from?
@@ -127,9 +127,8 @@ unsupported ones.
 <a name="usage"></a>
 ## Usage
 
-All distributables are UMD wrapped. So, it supports AMD, CommonJS, or global variables (in case AMD or CommonJS have not been detected).
-
-### Script tags
+All distributables are UMD wrapped. So, it supports AMD, CommonJS, or global
+variables (in case neither AMD nor CommonJS have been detected).
 
 Example loading with script tags:
 ```html
@@ -139,9 +138,6 @@ Example loading with script tags:
 ```
 Note that Globalize's Download Builder will eventually embed CLDR, so no dependency is required. We can also distribute it on CDNs embedded this way.
 
-
-<a name="amd"></a>
-### AMD
 Example loading with AMD:
 ```javascript
 require.config({
@@ -154,7 +150,6 @@ require( [ "./dist/globalize", "./dist/globalize.date" ], function( Globalize ) 
 });
 ```
 
-<a name="commonjs"></a>
 Example loading with node.js:
 ```javascript
 var Globalize = require( "./dist/globalize.date" );
