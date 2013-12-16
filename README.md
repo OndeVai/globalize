@@ -82,22 +82,17 @@ easy to use. Read below [How to get and load CLDR JSON data](#cldr_usage) for
 more information on its usage.
 
 <a name="modules"></a>
-#### Load and use what you need only
+#### Load and use only what you need
 
-Globalize is split in modules.
-
-***Core***
+Globalize is split in modules: core, number (coming soon), date, and translate.
+We're evaluating other modules, eg. plural, ordinals, etc.
 
 The core implements [`Globalize.load( cldrData )`](#load), and
 [`Globalize.locale( locale )`](#locale).
 
-***Date module***
-
 The date module extends core Globalize, and adds [`Globalize.format( value,
 pattern, locale )`](#format), and [`Globalize.parseDate( value, patterns, locale
 )`](#parse_date).
-
-***Translate module***
 
 The translate module extends core Globalize, and adds
 [`Globalize.loadTranslations( locale, json )`](#load_translations), and
